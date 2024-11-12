@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration From</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="index.css">
     <script src="main.js" defer></script>
 </head>
@@ -16,11 +16,18 @@
 
             <input type="text" name="Studnt Name" placeholder="Student Name" required oninput="checkInput()"><br>
             <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required oninput="checkInput()"><br>
-            <input type="text" name="Group Name" placeholder="Group Name" required oninput="checkInput()"><br>
             <input type="tel" name="Phone Number" placeholder="Phone Number" required oninput="checkInput()"><br>
 
-            <label for="event">Choose an option:</label>
-            <select name="event" id="event" onchange="handleOptionChange()" required>
+            <label for="branch">Branch:</label>
+            <select name="branch" id="branch" required>
+                <option value="">Select your branch</option>
+                <option value="CSE">CSE</option>
+                <option value="CSM">CSM(AI & ML)</option>
+                <option value="DS">DS</option>
+                <option value="ECE">ECE</option>
+            </select><br>
+            <label for="eventChoice">Choose an option:</label>
+            <select name="eventChoice" id="eventChoice" onchange="handleOptionChange()" required>
                 <option value="">Select an option</option>
                 <optgroup label="Cultural events">
                     <option value="Dance">Dance</option>
@@ -47,7 +54,7 @@
             <div id="players" style="display: none;">
                 <label for="game_mode">Game Mode:</label>
                 <select id="game_mode" name="Game Mode">
-                  <option value="Select game mode">Select Game mode</option>
+                    <option value="">Select Game Mode</option>
                     <option value="Solo">Solo</option>
                     <option value="Duo">Duo</option>
                     <option value="Squad">Squad</option>
