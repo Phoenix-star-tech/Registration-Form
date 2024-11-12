@@ -1,7 +1,7 @@
 function checkInput() {
     const textInputs = document.querySelectorAll(".contact-form input[type='text']");
     const phoneInput = document.querySelector(".contact-form input[type='tel']");
-    const eventSelect = document.getElementById("event");
+    const eventSelect = document.getElementById("eventChoice");
     const submitButton = document.querySelector(".btn-submit");
 
     let allFilled = true;
@@ -19,7 +19,7 @@ function checkInput() {
 }
 
 function handleOptionChange() {
-    const selectedOption = document.getElementById("event").value;
+    const selectedOption = document.getElementById("eventChoice").value;
     const membersField = document.getElementById("members");
     const playersField = document.getElementById("players");
 
