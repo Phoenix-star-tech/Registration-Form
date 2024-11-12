@@ -1,75 +1,69 @@
-.feedbackform {
-    max-width: 600px;
-    margin: 50px auto;
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 200px;
     padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
   }
   
-  /* Input Fields and Textarea */
-  .feedbackform input[type="email"],
-  .feedbackform textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  .contact-info h2 {
+    font-size: 2em;
+    color: #FFA500;
+    font-family: 'Rubik Mono One', sans-serif;
+  }
+  
+  .contact-info p {
     font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    transition: border-color 0.3s ease;
-  }
-  
-  /* Placeholder Styling */
-  .feedbackform input::placeholder,
-  .feedbackform textarea::placeholder {
-    color: #aaa;
-  }
-  
-  /* Focus States */
-  .feedbackform input[type="email"]:focus,
-  .feedbackform textarea:focus {
-    border-color: #ffa500;
-    outline: none;
-  }
-  
-  /* Submit Button */
-  .feedbackform button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    background-color: #ffa500;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .feedbackform button[type="submit"]:hover {
-    background-color: #ff8c00;
-  }
-  /* Result Message */
-  #result {
-    margin-top: 20px;
-    font-size: 14px;
     color: #333;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .feedbackform {
-      padding: 15px;
-    }
+  .contact-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
   
-    .feedbackform input[type="email"],
-    .feedbackform textarea {
-      padding: 12px;
-    }
+  .contact-form-container {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+  }
   
-    .feedbackform button[type="submit"] {
-      padding: 12px;
-      font-size: 14px;
-    }
+  .contact-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .contact-form .btn-submit {
+    background-color: #FFA500;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form .btn-submit:hover {
+    background-color: #FF8B05;
   }

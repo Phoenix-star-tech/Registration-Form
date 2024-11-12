@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form class="feedbackform" action="https://api.web3forms.com/submit" method="POST" id="form">
-
-        <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
-        <input type="hidden" name="subject" value="New Submission from Web3Forms">
-        <input type="checkbox" name="botcheck" id="" style="display: none;">
-    
-        <!-- Custom Form Data -->
-        <input type="username" class="feedbackemail" placeholder="Student Name" name="Student Name" required><br>
-        <input type="number" class="feedbackemail" placeholder="username" name="Hallticket Numaber" required><br>
-        <textarea class="feedbackmessage " name="message" placeholder="Feedback " required></textarea>
-    <button type="submit" >Submit</button>
-        <div id="result"></div>
-    </form>
+    <div class="contact-form-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
+          <input type="hidden" name="subject" value="New Contact Request">
+          <input type="checkbox" name="botcheck" style="display: none;">
+  
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+           <div class="form-group">
+            <input type="tel" name="telphone" placeholder="Phone Number" pattern="[0-9]{10}"  title="Ten digits code" required/>
+           </div>
+            <div class="form-group">
+            <textarea name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
 </body>
 </html>
