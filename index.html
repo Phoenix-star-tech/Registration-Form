@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration-Form</title>
+    <title>Registration From</title>
     <link rel="stylesheet" href="index.css">
+    <script src="main.js" defer></script>
 </head>
-
 <body>
     <div class="contact-form-container">
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
@@ -15,12 +14,14 @@
             <input type="hidden" name="subject" value="New Contact Request">
             <input type="checkbox" name="botcheck" style="display: none;">
 
-            <input type="text" name="Studnt Name" placeholder="Studnt Name" required><br>
-            <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required><br>
-            <input type="text" name="Group Name" placeholder="Group Name" required><br>
-            <label for="cars">Choose a option:</label>
+            <input type="text" name="Studnt Name" placeholder="Student Name" required oninput="checkInput()"><br>
+            <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required oninput="checkInput()"><br>
+            <input type="text" name="Group Name" placeholder="Group Name" required oninput="checkInput()"><br>
+            <input type="tel" name="Phone Number" placeholder="Phone Number" required oninput="checkInput()"><br>
 
-            <select name="cars" id="cars">
+            <label for="event">Choose an option:</label>
+            <select name="event" id="event" onchange="handleOptionChange()" required>
+                <option value="">Select an option</option>
                 <optgroup label="Cultural events">
                     <option value="Dance">Dance</option>
                     <option value="Speech">Speech</option>
@@ -38,10 +39,30 @@
                 </optgroup>
             </select><br>
 
-            <button type="submit" class="btn btn-submit">Send From</button>
+            <div id="members" style="display: none;">
+                <label for="num_members">Number of Members (Max 6):</label>
+                <input type="number" id="num_members" name="Number of Members" min="1" max="6" placeholder="1-6" oninput="validateMembers()">
+            </div>
+
+            <div id="players" style="display: none;">
+                <label for="game_mode">Game Mode:</label>
+                <select id="game_mode" name="Game Mode">
+                  <option value="Select game mode">Select Game mode</option>
+                    <option value="Solo">Solo</option>
+                    <option value="Duo">Duo</option>
+                    <option value="Squad">Squad</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-submit" disabled>Send Form</button>
         </form>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Only 6 members can participate in Dance or Drama.</p>
+            <button class="close-btn" onclick="closeModal()">OK</button>
+        </div>
     </div>
 </body>
-
 </html>
