@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-Form</title>
+</head>
+<body>
+    <form class="feedbackform" action="https://api.web3forms.com/submit" method="POST" id="form">
 
+        <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
+        <input type="hidden" name="subject" value="New Submission from Web3Forms">
+        <input type="checkbox" name="botcheck" id="" style="display: none;">
+    
+        <!-- Custom Form Data -->
+        <input type="email" class="feedbackemail" placeholder="Email" name="email" required><br>
+        <textarea class="feedbackmessage " name="message" placeholder="Feedback " required></textarea>
+    <button type="submit" >Submit</button>
+        <div id="result"></div>
+    </form>
+</body>
+</html>
