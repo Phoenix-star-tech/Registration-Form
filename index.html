@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration-Form</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <div class="contact-form-container">
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-          <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
-          <input type="hidden" name="subject" value="New Contact Request">
-          <input type="checkbox" name="botcheck" style="display: none;">
-  
-          <input type="text" name="Studnt Name" placeholder="Studnt Name" required><br>
-          <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required><br>
-          <input type="text" name="Group Name" placeholder="Group Name" required><br>
+            <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
+            <input type="hidden" name="subject" value="New Contact Request">
+            <input type="checkbox" name="botcheck" style="display: none;">
 
-          <button type="submit" class="btn btn-submit">Send Message</button>
+            <input type="text" name="Studnt Name" placeholder="Studnt Name" required><br>
+            <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required><br>
+            <input type="text" name="Group Name" placeholder="Group Name" required><br>
+            <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <button type="submit" class="btn btn-submit">Send Message</button>
         </form>
-      </div>
+    </div>
     </div>
 </body>
+
 </html>
