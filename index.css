@@ -124,7 +124,7 @@ footer{
 }
 .footer-info a{
     text-decoration: none;
-    
+    padding: 5px;
 }
 @media (min-width: 768px) {
     .contact-form-container {
