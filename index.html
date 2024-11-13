@@ -9,12 +9,15 @@
 </head>
 <body>
     <div class="contact-form-container">
+      <center><h1 class="svs">SVS</h1>
+      <br><p class="svsname">Group of institutions</p>
+      <h2>Registration-Form </h2><br /></center>
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <input type="hidden" name="access_key" value="12e6bb85-d2ef-46d9-b7b4-e67f3ced8e61">
             <input type="hidden" name="subject" value="New Contact Request">
             <input type="checkbox" name="botcheck" style="display: none;">
 
-            <input type="text" name="Studnt Name" placeholder="Student Name" required oninput="checkInput()"><br>
+            <input type="text" name="Studnt Name" placeholder="Student Name (OR) Team name" required oninput="checkInput()"><br>
             <input type="text" name="Hallticket Number" placeholder="Hallticket Number" required oninput="checkInput()"><br>
             <input type="tel" name="Phone Number" placeholder="Phone Number" required oninput="checkInput()"><br>
 
@@ -26,6 +29,7 @@
                 <option value="DS">DS</option>
                 <option value="ECE">ECE</option>
             </select><br>
+
             <label for="eventChoice">Choose an option:</label>
             <select name="eventChoice" id="eventChoice" onchange="handleOptionChange()" required>
                 <option value="">Select an option</option>
@@ -59,7 +63,10 @@
                     <option value="Duo">Duo</option>
                     <option value="Squad">Squad</option>
                 </select>
-            </div>
+            </div><br>
+            
+              <img class="qrcode"  src="qrcode.png" alt=""><br />
+            <input type="text" id="pasteOnlyInput" placeholder="Paste payment id here" name="payment id" oninput="checkInput()" />
 
             <button type="submit" class="btn btn-submit" disabled>Send Form</button>
         </form>
