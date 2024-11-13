@@ -118,7 +118,9 @@ body {
   position: relative;
   top: -25px;
 }
-
+footer{
+    align-items: center;
+}
 @media (min-width: 768px) {
     .contact-form-container {
         padding: 30px;
