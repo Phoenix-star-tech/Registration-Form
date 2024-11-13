@@ -118,7 +118,7 @@ body {
   position: relative;
   top: -25px;
 }
-footer{
+.footer{
     align-items: center;
 }
 @media (min-width: 768px) {
