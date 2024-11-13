@@ -118,11 +118,7 @@ body {
   position: relative;
   top: -25px;
 }
-.qrcode{
-  width: 200px;
-  height: 200px;
-  align-self: center;
-}
+
 @media (min-width: 768px) {
     .contact-form-container {
         padding: 30px;
