@@ -116,6 +116,7 @@ body {
   top: -25px;
 }
 footer{
+    background-color: aliceblue;
     align-items: center;
 }
 @media (min-width: 768px) {
